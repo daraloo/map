@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سند فرایند مجتمع</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+ --bg:#f7f4ef;
+ --surface:#fff;
+ --ink:#342b22;
+ --muted:#887d70;
+ --deep:#593316;
+ --deep2:#8a4a1d;
+ --accent:#e58a32;
+ --line:#eee5da;
+ --shadow:0 12px 34px rgba(91,53,22,.09);
+}
+
+* {
+ box-sizing:border-box;
+}
+
+body {
+ margin:0;
+ min-height:100vh;
+ background:var(--bg);
+ color:var(--ink);
+ font-family:'Vazirmatn',Tahoma,sans-serif;
+}
+
+a {
+ color:inherit;
+ text-decoration:none;
+}
+
+/* Header */
+
+.topbar {
+ height:76px;
+ background:#fff;
+ border-bottom:1px solid var(--line);
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ padding:0 30px;
+ position:sticky;
+ top:0;
+ z-index:5;
+}
+
+.brand {
+ display:flex;
+ align-items:center;
+ gap:13px;
+}
+
+.logo {
+ width:44px;
+ height:44px;
+ border-radius:14px;
+ background:linear-gradient(145deg,#f0a13e,#bd5e1d);
+ display:grid;
+ place-items:center;
+ color:#fff;
+ font-size:23px;
+ box-shadow:0 7px 17px #d77b2d40;
+}
+
+.brand h1 {
+ font-size:16px;
+ margin:0 0 3px;
+ font-weight:800;
+}
+
+.brand small {
+ font-size:11px;
+ color:var(--muted);
+}
+
+.top-meta {
+ display:flex;
+ align-items:center;
+ gap:10px;
+ font-size:12px;
+ color:var(--muted);
+}
+
+.status {
+ padding:7px 12px;
+ border-radius:30px;
+ color:#a35b1f;
+ background:#fff5e9;
+ border:1px solid #f3d8b8;
+}
+
+/* Main Layout */
+
+.layout {
+ display:grid;
+ grid-template-columns:295px minmax(0,1fr);
+ min-height:calc(100vh - 76px);
+}
+
+/* Sidebar */
+
+.sidebar {
+ background:var(--deep);
+ color:#fff5e9;
+ padding:22px 15px 30px;
+ min-height:calc(100vh - 76px);
+}
+
+.side-heading {
+ font-size:11px;
+ color:#e5bd91;
+ padding:5px 13px 14px;
+}
+
+.nav-group {
+ margin-bottom:7px;
+}
+
+.nav-title {
+ display:flex;
+ align-items:center;
+ gap:11px;
+ padding:10px 12px;
+ border-radius:9px;
+ font-size:13px;
+ font-weight:600;
+ color:#fff;
+ transition:.2s;
+}
+
+.nav-title:hover,
+.subnav a:hover {
+ background:#ffffff14;
+}
+
+.nav-icon {
+ width:26px;
+ height:26px;
+ display:grid;
+ place-items:center;
+ background:#ffffff16;
+ border-radius:8px;
+ color:#ffc078;
+ flex:none;
+ font-size:14px;
+}
+
+.subnav {
+ margin:3px 14px 9px 0;
+ padding-right:15px;
+ border-right:1px solid #95633c;
+ display:grid;
+ gap:2px;
+}
+
+.subnav a {
+ font-size:11px;
+ color:#e2cdb9;
+ padding:7px 10px;
+ border-radius:7px;
+ line-height:1.5;
+}
+
+.subnav a:before {
+ content:"";
+ display:inline-block;
+ width:4px;
+ height:4px;
+ background:#f0a34e;
+ border-radius:50%;
+ margin-left:9px;
+ vertical-align:middle;
+}
+
+.sidebar-foot {
+ margin:25px 7px 0;
+ padding:13px;
+ border:1px solid #ffffff26;
+ border-radius:10px;
+ color:#dfc6ad;
+ font-size:10px;
+ line-height:2;
+}
+
+/* Content */
+
+main {
+ padding:30px;
+ display:flex;
+ flex-direction:column;
+ min-width:0;
+}
+
+.breadcrumb {
+ font-size:11px;
+ color:var(--muted);
+ margin-bottom:20px;
+}
+
+.breadcrumb span {
+ color:#b9a995;
+ margin:0 7px;
+}
+
+/* Hero */
+
+.hero {
+ background:linear-gradient(115deg,#633717,#b76525);
+ border-radius:16px;
+ padding:25px 28px;
+ color:#fff;
+ position:relative;
+ overflow:hidden;
+ box-shadow:var(--shadow);
+ margin-bottom:22px;
+}
+
+.hero:after {
+ content:"";
+ position:absolute;
+ width:235px;
+ height:235px;
+ border:1px solid #ffffff22;
+ border-radius:50%;
+ left:-65px;
+ top:-110px;
+ box-shadow:
+ 0 0 0 25px #ffffff09,
+ 0 0 0 52px #ffffff06;
+}
+
+.hero-label {
+ font-size:11px;
+ color:#ffcf9a;
+ margin-bottom:8px;
+ letter-spacing:.4px;
+}
+
+.hero h2 {
+ font-size:23px;
+ margin:0 0 7px;
+ font-weight:800;
+}
+
+.hero p {
+ font-size:12px;
+ color:#f6e5d5;
+ margin:0;
+ max-width:680px;
+ line-height:2;
+}
+
+/* Center Message */
+
+.content-card {
+ background:var(--surface);
+ border:1px solid var(--line);
+ border-radius:16px;
+ min-height:390px;
+ display:grid;
+ place-items:center;
+ text-align:center;
+ padding:35px;
+ box-shadow:var(--shadow);
+ flex:1;
+}
+
+.notice {
+ max-width:440px;
+}
+
+.notice-icon {
+ width:78px;
+ height:78px;
+ border-radius:23px;
+ background:#fff3e4;
+ color:#cf7629;
+ display:grid;
+ place-items:center;
+ margin:0 auto 20px;
+ font-size:33px;
+ border:1px solid #f4dfc6;
+}
+
+.notice h3 {
+ font-size:21px;
+ margin:0 0 10px;
+ color:#49311f;
+}
+
+.notice p {
+ font-size:12px;
+ line-height:2.2;
+ color:var(--muted);
+ margin:0;
+}
+
+.notice-line {
+ width:48px;
+ height:3px;
+ background:var(--accent);
+ border-radius:4px;
+ margin:20px auto 0;
+}
+
+/* Footer */
+
+.footer {
+ font-size:10px;
+ color:#a69a8d;
+ text-align:center;
+ padding:18px 0 0;
+}
+
+/* Responsive */
+
+@media(max-width:850px) {
+
+ .layout {
+  grid-template-columns:1fr;
+ }
+
+ .sidebar {
+  min-height:0;
+  padding:15px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:4px;
+ }
+
+ .side-heading,
+ .sidebar-foot {
+  grid-column:1/-1;
+ }
+
+ .nav-group {
+  margin:0;
+ }
+
+ .subnav {
+  margin-bottom:5px;
+ }
+
+ main {
+  padding:20px;
+ }
+}
+
+@media(max-width:520px) {
+
+ .topbar {
+  padding:0 15px;
+  height:68px;
+ }
+
+ .brand h1 {
+  font-size:13px;
+ }
+
+ .brand small {
+  font-size:9px;
+ }
+
+ .top-meta .status {
+  display:none;
+ }
+
+ .sidebar {
+  grid-template-columns:1fr 1fr;
+  padding:12px 9px;
+ }
+
+ .nav-title {
+  font-size:11px;
+  padding:9px 7px;
+  gap:7px;
+ }
+
+ .subnav {
+  margin-right:7px;
+  padding-right:9px;
+ }
+
+ main {
+  padding:14px;
+ }
+
+ .hero {
+  padding:20px;
+ }
+
+ .hero h2 {
+  font-size:19px;
+ }
+
+ .content-card {
+  min-height:330px;
+  padding:22px;
+ }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="topbar">
+
+ <div class="brand">
+
+  <div class="logo">⚙</div>
+
+  <div>
+   <h1>سند فرایند مجتمع</h1>
+   <small>سامانه مستندسازی، تحلیل و مدیریت فرایندهای سازمانی</small>
+  </div>
+
+ </div>
+
+ <div class="top-meta">
+  <span>مستندات فرایندی</span>
+  <span class="status">◉ سند در حال آماده‌سازی</span>
+ </div>
+
+</header>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+ <div class="side-heading">
+  فهرست موضوعی سند فرایندها
+ </div>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">▣</span>
+   کلیات و معماری فرایندها
+  </a>
+  <div class="subnav">
+   <a href="#">معرفی و هدف سند</a>
+   <a href="#">دامنه و محدوده فرایندها</a>
+   <a href="#">اصطلاحات و تعاریف</a>
+   <a href="#">معماری کلان فرایندهای مجتمع</a>
+   <a href="#">طبقه‌بندی و کدگذاری فرایندها</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">▤</span>
+   فرایندهای راهبری و مدیریتی
+  </a>
+  <div class="subnav">
+   <a href="#">برنامه‌ریزی راهبردی</a>
+   <a href="#">تعیین اهداف و شاخص‌ها</a>
+   <a href="#">مدیریت عملکرد سازمان</a>
+   <a href="#">مدیریت جلسات و تصمیمات</a>
+   <a href="#">مدیریت ریسک و کنترل‌های سازمانی</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">⚒</span>
+   فرایندهای عملیاتی و تولید
+  </a>
+  <div class="subnav">
+   <a href="#">برنامه‌ریزی تولید</a>
+   <a href="#">عملیات استخراج و معدنکاری</a>
+   <a href="#">خردایش و فرآوری</a>
+   <a href="#">تولید و کنترل محصول</a>
+   <a href="#">بسته‌بندی، انبارش و ارسال</a>
+   <a href="#">کنترل کیفیت و آزمایشگاه</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">⌁</span>
+   فرایندهای نگهداری و تعمیرات
+  </a>
+  <div class="subnav">
+   <a href="#">برنامه‌ریزی تعمیرات</a>
+   <a href="#">نگهداری پیشگیرانه و پیش‌بینانه</a>
+   <a href="#">تعمیرات اضطراری</a>
+   <a href="#">مدیریت تجهیزات و دارایی‌ها</a>
+   <a href="#">مدیریت قطعات یدکی</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">♙</span>
+   فرایندهای منابع انسانی و پشتیبانی
+  </a>
+  <div class="subnav">
+   <a href="#">جذب و استخدام</a>
+   <a href="#">حضور و غیاب و کارکرد</a>
+   <a href="#">آموزش و توسعه شایستگی</a>
+   <a href="#">خدمات رفاهی و پشتیبانی کارکنان</a>
+   <a href="#">ارزیابی عملکرد و جبران خدمات</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">▧</span>
+   فرایندهای مالی و اقتصادی
+  </a>
+  <div class="subnav">
+   <a href="#">بودجه‌ریزی و کنترل بودجه</a>
+   <a href="#">حسابداری و گزارشگری مالی</a>
+   <a href="#">خزانه‌داری و پرداخت‌ها</a>
+   <a href="#">بهای تمام‌شده</a>
+   <a href="#">مدیریت دارایی‌های مالی</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">⇄</span>
+   فرایندهای تأمین و تدارکات
+  </a>
+  <div class="subnav">
+   <a href="#">برنامه‌ریزی نیازمندی‌ها</a>
+   <a href="#">درخواست خرید و استعلام</a>
+   <a href="#">ارزیابی و انتخاب تأمین‌کننده</a>
+   <a href="#">خرید و عقد قرارداد</a>
+   <a href="#">تحویل‌گیری و ارزیابی کالا</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">♧</span>
+   فرایندهای HSE و محیط‌زیست
+  </a>
+  <div class="subnav">
+   <a href="#">مدیریت ایمنی و بهداشت حرفه‌ای</a>
+   <a href="#">شناسایی خطرات و ارزیابی ریسک</a>
+   <a href="#">مدیریت شرایط اضطراری</a>
+   <a href="#">پایش محیط‌زیست</a>
+   <a href="#">مدیریت پسماند و آلاینده‌ها</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">⌘</span>
+   فرایندهای فناوری و تحول دیجیتال
+  </a>
+  <div class="subnav">
+   <a href="#">مدیریت سامانه‌ها و زیرساخت فناوری</a>
+   <a href="#">مدیریت داده و اطلاعات</a>
+   <a href="#">اتوماسیون و گردش کار</a>
+   <a href="#">امنیت اطلاعات و دسترسی‌ها</a>
+   <a href="#">هوشمندسازی و تحلیل داده</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">⇢</span>
+   فرایندهای حقوقی و قراردادها
+  </a>
+  <div class="subnav">
+   <a href="#">تنظیم و بررسی قراردادها</a>
+   <a href="#">مدیریت تعهدات قراردادی</a>
+   <a href="#">رسیدگی به دعاوی و اختلافات</a>
+   <a href="#">مدیریت مکاتبات و اسناد حقوقی</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">▥</span>
+   مدل‌سازی و شناسنامه فرایند
+  </a>
+  <div class="subnav">
+   <a href="#">نقشه فرایندها و زنجیره ارزش</a>
+   <a href="#">نمودارهای BPMN</a>
+   <a href="#">ورودی‌ها و خروجی‌ها</a>
+   <a href="#">نقش‌ها و مسئولیت‌ها (RACI)</a>
+   <a href="#">سامانه‌ها و فرم‌های مرتبط</a>
+   <a href="#">نسخه و تاریخچه تغییرات</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">◈</span>
+   پایش و بهبود فرایندها
+  </a>
+  <div class="subnav">
+   <a href="#">شاخص‌های کلیدی عملکرد فرایند</a>
+   <a href="#">تحلیل زمان و هزینه</a>
+   <a href="#">شناسایی گلوگاه‌ها و دوباره‌کاری</a>
+   <a href="#">ممیزی و ارزیابی انطباق</a>
+   <a href="#">اقدامات اصلاحی و بهبود مستمر</a>
+  </div>
+ </section>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#">
+   <span class="nav-icon">▣</span>
+   اسناد و پیوست‌ها
+  </a>
+  <div class="subnav">
+   <a href="#">روش‌های اجرایی و دستورالعمل‌ها</a>
+   <a href="#">فرم‌ها و چک‌لیست‌ها</a>
+   <a href="#">سوابق و مستندات پشتیبان</a>
+   <a href="#">استانداردها و الزامات مرجع</a>
+  </div>
+ </section>
+
+ <div class="sidebar-foot">
+  این فهرست، ساختار پیشنهادی برای مستندسازی فرایندهای مجتمع است. جزئیات هر فرایند پس از بررسی و تأیید واحدهای مالک فرایند تکمیل خواهد شد.
+ </div>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+
+<main>
+
+ <div class="breadcrumb">
+  خانه <span>‹</span>
+  مدیریت سازمان <span>‹</span>
+  سند فرایند مجتمع
+ </div>
+
+ <section class="hero">
+
+  <div class="hero-label">
+   INTEGRATED PROCESS DOCUMENTATION
+  </div>
+
+  <h2>سند فرایند مجتمع</h2>
+
+  <p>
+   مرجع یکپارچه شناسایی، طبقه‌بندی، مدل‌سازی، مستندسازی،
+   پایش و بهبود فرایندهای مدیریتی، عملیاتی و پشتیبانی مجتمع.
+  </p>
+
+ </section>
+
+ <section class="content-card">
+
+  <div class="notice">
+
+   <div class="notice-icon">⚙</div>
+
+   <h3>سند در دسترس نیست</h3>
+
+   <p>
+    محتوای سند فرایند مجتمع در حال تدوین و تکمیل است.
+    پس از گردآوری اطلاعات، اعتبارسنجی فرایندها و تأیید
+    واحدهای مسئول، مستندات در این بخش منتشر خواهد شد.
+   </p>
+
+   <div class="notice-line"></div>
+
+  </div>
+
+ </section>
+
+ <div class="footer">
+  سند فرایند مجتمع <span>•</span> نسخه نمایشی ساختار اطلاعات
+ </div>
+
+</main>
+
+</div>
+
+</body>
+</html>

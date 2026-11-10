@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سند جامع اطلاعات منطقه</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+:root{
+  --bg:#f3f6fa;--surface:#fff;--ink:#172b3a;--muted:#718293;
+  --navy:#102b40;--navy2:#173c55;--teal:#1b9a91;--line:#e5ebf0;
+  --gold:#c69a53;--shadow:0 12px 35px rgba(19,43,62,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;min-height:100vh}
+a{text-decoration:none;color:inherit}
+.topbar{height:76px;background:var(--surface);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:13px}
+.logo{width:43px;height:43px;border-radius:13px;background:linear-gradient(145deg,#1b9a91,#126c73);display:grid;place-items:center;color:white;font-size:22px;box-shadow:0 7px 16px #1b9a9138}
+.brand h1{font-size:16px;margin:0 0 3px;font-weight:800}
+.brand small{color:var(--muted);font-size:11px}
+.top-meta{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px}
+.status{border:1px solid #f0dfc4;background:#fff9ef;color:#9b7135;border-radius:30px;padding:7px 12px}
+.layout{display:grid;grid-template-columns:290px minmax(0,1fr);min-height:calc(100vh - 76px)}
+.sidebar{background:var(--navy);color:#e8f0f5;padding:22px 15px 30px;min-height:calc(100vh - 76px)}
+.side-heading{font-size:11px;color:#8fa9ba;padding:5px 13px 14px;letter-spacing:.3px}
+.nav-group{margin-bottom:8px}
+.nav-title{display:flex;align-items:center;gap:11px;padding:10px 12px;border-radius:9px;font-size:13px;font-weight:600;color:#f2f6f8;transition:.2s}
+.nav-title:hover,.subnav a:hover{background:#ffffff12;color:#fff}
+.nav-icon{width:25px;height:25px;display:grid;place-items:center;background:#ffffff12;border-radius:7px;font-size:13px;color:#79d2c7;flex:none}
+.subnav{margin:3px 14px 9px 0;padding-right:15px;border-right:1px solid #416075;display:grid;gap:2px}
+.subnav a{font-size:11px;color:#a9bdca;padding:7px 10px;border-radius:7px;line-height:1.5}
+.subnav a:before{content:"";display:inline-block;width:4px;height:4px;background:#63899b;border-radius:50%;margin-left:9px;vertical-align:middle}
+.sidebar-foot{margin:26px 7px 0;padding:13px;border:1px solid #ffffff1c;border-radius:10px;color:#9eb2c0;font-size:10px;line-height:2}
+main{padding:30px;display:flex;flex-direction:column;min-width:0}
+.breadcrumb{font-size:11px;color:var(--muted);margin-bottom:20px}
+.breadcrumb span{color:#aab6c0;margin:0 7px}
+.hero{background:linear-gradient(115deg,#14364e,#1c5364);border-radius:16px;padding:25px 28px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow);margin-bottom:22px}
+.hero:after{content:"";position:absolute;width:230px;height:230px;border:1px solid #ffffff17;border-radius:50%;left:-65px;top:-105px;box-shadow:0 0 0 25px #ffffff08,0 0 0 52px #ffffff06}
+.hero-label{font-size:11px;color:#a9d7d2;margin-bottom:8px}
+.hero h2{font-size:23px;margin:0 0 7px;font-weight:800}
+.hero p{font-size:12px;color:#d0e0e7;margin:0;max-width:650px;line-height:2}
+.content-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;min-height:390px;display:grid;place-items:center;text-align:center;padding:35px;box-shadow:var(--shadow);flex:1}
+.notice{max-width:430px}
+.notice-icon{width:76px;height:76px;border-radius:22px;background:#fff7e9;color:#bd8c43;display:grid;place-items:center;margin:0 auto 20px;font-size:32px;border:1px solid #f3e5ce}
+.notice h3{font-size:20px;margin:0 0 10px;color:#20394b}
+.notice p{font-size:12px;line-height:2.1;color:var(--muted);margin:0}
+.notice-line{width:48px;height:3px;background:var(--teal);border-radius:4px;margin:20px auto 0}
+.footer{font-size:10px;color:#9aa8b4;text-align:center;padding:18px 0 0}
+@media(max-width:850px){
+ .layout{grid-template-columns:1fr}
+ .sidebar{min-height:0;padding:15px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+ .side-heading,.sidebar-foot{grid-column:1/-1}
+ .nav-group{margin:0}
+ .subnav{margin-bottom:5px}
+ main{padding:20px}
+}
+@media(max-width:520px){
+ .topbar{padding:0 15px;height:68px}.brand h1{font-size:13px}.brand small{font-size:9px}.top-meta .status{display:none}
+ .sidebar{grid-template-columns:1fr 1fr;padding:12px 9px}
+ .nav-title{font-size:11px;padding:9px 7px;gap:7px}
+ .subnav{margin-right:7px;padding-right:9px}
+ main{padding:14px}.hero{padding:20px}.hero h2{font-size:19px}
+ .content-card{min-height:330px;padding:22px}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">⌖</div>
+    <div>
+      <h1>اطلس اطلاعات منطقه</h1>
+      <small>سامانه معرفی و مستندسازی منطقه</small>
+    </div>
+  </div>
+  <div class="top-meta"><span>پرونده منطقه‌ای</span><span class="status">◉ سند در حال آماده‌سازی</span></div>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+  <div class="side-heading">فهرست موضوعی سند</div>
+
+  <section class="nav-group">
+    <a class="nav-title" href="#"><span class="nav-icon">⌂</span>معرفی و شناسنامه منطقه</a>
+    <div class="subnav"><a href="#">معرفی کلی منطقه</a><a href="#">موقعیت و تقسیمات کشوری</a><a href="#">تاریخچه و پیشینه</a><a href="#">نام‌شناسی و هویت محلی</a></div>
+  </section>
+  <section class="nav-group">
+    <a class="nav-title" href="#"><span class="nav-icon">◎</span>جغرافیا و محیط طبیعی</a>
+    <div class="subnav"><a href="#">موقعیت جغرافیایی و مختصات</a><a href="#">توپوگرافی و عوارض زمین</a><a href="#">اقلیم و شرایط آب‌وهوایی</a><a href="#">منابع آب و آبخیزداری</a><a href="#">پوشش گیاهی و حیات‌وحش</a><a href="#">مخاطرات طبیعی و محیط‌زیست</a></div>
+  </section>
+  <section class="nav-group">
+    <a class="nav-title" href="#"><span class="nav-icon">♙</span>جمعیت و جامعه</a>
+    <div class="subnav"><a href="#">جمعیت و ساختار خانوار</a><a href="#">ترکیب سنی و جنسیتی</a><a href="#">مهاجرت و تحولات جمعیتی</a><a href="#">فرهنگ، آداب و رسوم</a><a href="#">زبان و سرمایه اجتماعی</a></div>
+  </section>
+  <section class="nav-group">
+    <a class="nav-title" href="#"><span class="nav-icon">▦</span>زیرساخت‌ها و خدمات عمومی</a>
+    <div class="subnav"><a href="#">راه‌ها و حمل‌ونقل</a><a href="#">آب، برق، گاز و ارتباطات</a><a href="#">آموزش و مدارس</a><a href="#">بهداشت و درمان</a><a href="#">امکانات ورزشی و فرهنگی</a><a href="#">خدمات و نهادهای عمومی</a></div>
+  </section>
+  <section class="nav-group">
+    <a class="nav-title" href="#"><span class="nav-icon">▤</span>اقتصاد و معیشت</a>
+    <div class="subnav"><a href="#">اشتغال و نیروی کار</a><a href="#">کشاورزی و دامداری</a><a href="#">کسب‌وکارهای محلی</a><a href="#">صنایع و فعالیت‌های معدنی</a><a href="#">درآمد و ظرفیت‌های اقتصادی</a></div>
+  </section>
+  <section class="nav-group">
+    <a class="nav-title" href="#"><span class="nav-icon">⌖</span>نقشه و اطلاعات مکانی (GIS)</a>
+    <div class="subnav"><a href="#">نقشه محدوده و حریم</a><a href="#">نقاط و عارضه‌های مکانی</a><a href="#">کاربری اراضی</a><a href="#">لایه‌های اطلاعات مکانی</a><a href="#">تصاویر هوایی و ماهواره‌ای</a></div>
+  </section>
+  <section class="nav-group">
+    <a class="nav-title" href="#"><span class="nav-icon">✚</span>مسئولیت اجتماعی و توسعه</a>
+    <div class="subnav"><a href="#">نیازسنجی و مسائل اولویت‌دار</a><a href="#">پروژه‌های مسئولیت اجتماعی</a><a href="#">طرح‌های عمرانی و خدماتی</a><a href="#">ذی‌نفعان و مشارکت محلی</a><a href="#">پایش اثرات و شاخص‌ها</a></div>
+  </section>
+  <section class="nav-group">
+    <a class="nav-title" href="#"><span class="nav-icon">▧</span>اسناد، آمار و مستندات</a>
+    <div class="subnav"><a href="#">گزارش‌ها و مطالعات</a><a href="#">آمار و جداول اطلاعاتی</a><a href="#">تصاویر و آرشیو رسانه‌ای</a><a href="#">نقشه‌ها و فایل‌های پیوست</a><a href="#">منابع و مراجع</a></div>
+  </section>
+  <section class="nav-group">
+    <a class="nav-title" href="#"><span class="nav-icon">◷</span>برنامه‌ریزی و چشم‌انداز</a>
+    <div class="subnav"><a href="#">تحلیل وضعیت موجود</a><a href="#">فرصت‌ها و محدودیت‌ها</a><a href="#">اهداف و راهبردها</a><a href="#">برنامه اقدام و اولویت‌بندی</a></div>
+  </section>
+
+  <div class="sidebar-foot">این فهرست ساختار پیشنهادی سند جامع اطلاعات منطقه است. محتوای هر بخش پس از تکمیل مستندات قابل درج خواهد بود.</div>
+</aside>
+
+<main>
+  <div class="breadcrumb">خانه <span>‹</span> منطقه منطقه <span>‹</span> سند جامع اطلاعات</div>
+  <section class="hero">
+    <div class="hero-label">COMPREHENSIVE REGIONAL PROFILE</div>
+    <h2>سند جامع اطلاعات منطقه</h2>
+    <p>درگاه یکپارچه معرفی منطقه، گردآوری داده‌های پایه، مستندات اجتماعی و اقتصادی، اطلاعات مکانی و ظرفیت‌های توسعه‌ای.</p>
+  </section>
+  <section class="content-card">
+    <div class="notice">
+      <div class="notice-icon">▤</div>
+      <h3>سند کامل در دسترس نیست</h3>
+      <p>محتوای جامع اطلاعات منطقه منطقه در حال گردآوری و تکمیل است. پس از آماده‌سازی و تأیید مستندات، اطلاعات این بخش منتشر خواهد شد.</p>
+      <div class="notice-line"></div>
+    </div>
+  </section>
+  <div class="footer">سند جامع اطلاعات منطقه <span>•</span> نسخه نمایشی ساختار اطلاعات</div>
+</main>
+</div>
+</body>
+</html>

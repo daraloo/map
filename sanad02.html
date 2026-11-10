@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سند پروژه مسئولیت های اجتماعی</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+:root{
+ --bg:#f5f3f8;--surface:#fff;--ink:#302640;--muted:#81778d;
+ --deep:#38234f;--deep2:#57366f;--accent:#b16b9a;--accent2:#d29b67;
+ --line:#e9e2ed;--shadow:0 12px 34px rgba(57,35,79,.09);
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif}
+a{color:inherit;text-decoration:none}
+.topbar{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:13px}
+.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(145deg,#b16b9a,#70477f);display:grid;place-items:center;color:#fff;font-size:22px;box-shadow:0 7px 17px #70477f35}
+.brand h1{font-size:16px;margin:0 0 3px;font-weight:800}
+.brand small{font-size:11px;color:var(--muted)}
+.top-meta{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted)}
+.status{padding:7px 12px;border-radius:30px;color:#95643c;background:#fff7ed;border:1px solid #f0dfca}
+.layout{display:grid;grid-template-columns:295px minmax(0,1fr);min-height:calc(100vh - 76px)}
+.sidebar{background:var(--deep);color:#f5eff8;padding:22px 15px 30px;min-height:calc(100vh - 76px)}
+.side-heading{font-size:11px;color:#c0a9ce;padding:5px 13px 14px}
+.nav-group{margin-bottom:7px}
+.nav-title{display:flex;align-items:center;gap:11px;padding:10px 12px;border-radius:9px;font-size:13px;font-weight:600;color:#fff;transition:.2s}
+.nav-title:hover,.subnav a:hover{background:#ffffff13}
+.nav-icon{width:26px;height:26px;display:grid;place-items:center;background:#ffffff14;border-radius:8px;color:#e4a9cf;flex:none;font-size:14px}
+.subnav{margin:3px 14px 9px 0;padding-right:15px;border-right:1px solid #765b88;display:grid;gap:2px}
+.subnav a{font-size:11px;color:#d0c1d9;padding:7px 10px;border-radius:7px;line-height:1.5}
+.subnav a:before{content:"";display:inline-block;width:4px;height:4px;background:#c58bb4;border-radius:50%;margin-left:9px;vertical-align:middle}
+.sidebar-foot{margin:25px 7px 0;padding:13px;border:1px solid #ffffff24;border-radius:10px;color:#c7b8d0;font-size:10px;line-height:2}
+main{padding:30px;display:flex;flex-direction:column;min-width:0}
+.breadcrumb{font-size:11px;color:var(--muted);margin-bottom:20px}
+.breadcrumb span{color:#b5a9bd;margin:0 7px}
+.hero{background:linear-gradient(115deg,#38234f,#75466f);border-radius:16px;padding:25px 28px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow);margin-bottom:22px}
+.hero:after{content:"";position:absolute;width:235px;height:235px;border:1px solid #ffffff20;border-radius:50%;left:-65px;top:-110px;box-shadow:0 0 0 25px #ffffff09,0 0 0 52px #ffffff06}
+.hero-label{font-size:11px;color:#e6bed8;margin-bottom:8px;letter-spacing:.4px}
+.hero h2{font-size:23px;margin:0 0 7px;font-weight:800}
+.hero p{font-size:12px;color:#eadfeb;margin:0;max-width:680px;line-height:2}
+.content-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;min-height:390px;display:grid;place-items:center;text-align:center;padding:35px;box-shadow:var(--shadow);flex:1}
+.notice{max-width:440px}
+.notice-icon{width:78px;height:78px;border-radius:23px;background:#f8edf5;color:#a65f91;display:grid;place-items:center;margin:0 auto 20px;font-size:33px;border:1px solid #f0ddea}
+.notice h3{font-size:21px;margin:0 0 10px;color:#392747}
+.notice p{font-size:12px;line-height:2.2;color:var(--muted);margin:0}
+.notice-line{width:48px;height:3px;background:var(--accent);border-radius:4px;margin:20px auto 0}
+.footer{font-size:10px;color:#a69bab;text-align:center;padding:18px 0 0}
+@media(max-width:850px){
+ .layout{grid-template-columns:1fr}
+ .sidebar{min-height:0;padding:15px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+ .side-heading,.sidebar-foot{grid-column:1/-1}
+ .nav-group{margin:0}
+ .subnav{margin-bottom:5px}
+ main{padding:20px}
+}
+@media(max-width:520px){
+ .topbar{padding:0 15px;height:68px}.brand h1{font-size:13px}.brand small{font-size:9px}.top-meta .status{display:none}
+ .sidebar{grid-template-columns:1fr 1fr;padding:12px 9px}
+ .nav-title{font-size:11px;padding:9px 7px;gap:7px}
+ .subnav{margin-right:7px;padding-right:9px}
+ main{padding:14px}.hero{padding:20px}.hero h2{font-size:19px}
+ .content-card{min-height:330px;padding:22px}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <div class="brand">
+  <div class="logo">♡</div>
+  <div>
+   <h1>سند پروژه مسئولیت های اجتماعی</h1>
+   <small>سامانه مدیریت، مستندسازی و پایش اقدامات اجتماعی</small>
+  </div>
+ </div>
+ <div class="top-meta"><span>پرونده پروژه</span><span class="status">◉ سند در حال آماده‌سازی</span></div>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+ <div class="side-heading">فهرست موضوعی سند پروژه</div>
+
+ <section class="nav-group">
+  <a class="nav-title" href="#"><span class="nav-icon">▣</span>کلیات و معرفی پروژه</a>
+  <div class="subnav"><a href="#">شناسنامه پروژه</a><a href="#">تعریف و مفاهیم مسئولیت اجتماعی</a><a href="#">ضرورت و پیشینه شکل‌گیری</a><a href="#">اهداف کلان و اختصاصی</a><a href="#">دامنه و محدوده اجرا</a></div>
+ </section>
+ <section class="nav-group">
+  <a class="nav-title" href="#"><span class="nav-icon">⌖</span>محدوده جغرافیایی و جامعه هدف</a>
+  <div class="subnav"><a href="#">معرفی منطقه و محدوده اثرگذاری</a><a href="#">روستاها و سکونتگاه‌های هدف</a><a href="#">گروه‌های ذی‌نفع و جامعه محلی</a><a href="#">ویژگی‌های جمعیتی و اجتماعی</a><a href="#">نقشه محدوده اجرای پروژه</a></div>
+ </section>
+ <section class="nav-group">
+  <a class="nav-title" href="#"><span class="nav-icon">⌕</span>مطالعات پایه و نیازسنجی</a>
+  <div class="subnav"><a href="#">مطالعات اجتماعی و میدانی</a><a href="#">شناسایی مسائل و چالش‌ها</a><a href="#">نیازسنجی جامعه محلی</a><a href="#">تحلیل ظرفیت‌ها و دارایی‌ها</a><a href="#">اولویت‌بندی نیازها</a></div>
+ </section>
+ <section class="nav-group">
+  <a class="nav-title" href="#"><span class="nav-icon">♧</span>محورهای مداخله و اقدام</a>
+  <div class="subnav"><a href="#">آموزش و توانمندسازی</a><a href="#">سلامت و بهداشت</a><a href="#">زیرساخت و خدمات عمومی</a><a href="#">اشتغال و توسعه اقتصادی</a><a href="#">محیط‌زیست و منابع طبیعی</a><a href="#">فرهنگ، ورزش و نشاط اجتماعی</a></div>
+ </section>
+ <section class="nav-group">
+  <a class="nav-title" href="#"><span class="nav-icon">◫</span>برنامه‌ها و سبد پروژه‌ها</a>
+  <div class="subnav"><a href="#">فهرست پروژه‌ها و اقدامات</a><a href="#">شرح فعالیت‌ها و خروجی‌ها</a><a href="#">زمان‌بندی و مراحل اجرا</a><a href="#">محدوده و جامعه بهره‌مند</a><a href="#">وضعیت پیشرفت پروژه‌ها</a></div>
+ </section>
+ <section class="nav-group">
+  <a class="nav-title" href="#"><span class="nav-icon">♙</span>حکمرانی و مشارکت ذی‌نفعان</a>
+  <div class="subnav"><a href="#">ساختار راهبری و مسئولیت‌ها</a><a href="#">نقش واحدهای سازمانی</a><a href="#">مشارکت مردم و نهادهای محلی</a><a href="#">شرکای اجرایی و تخصصی</a><a href="#">سازوکار ارتباطات و پاسخ‌گویی</a></div>
+ </section>
+ <section class="nav-group">
+  <a class="nav-title" href="#"><span class="nav-icon">◈</span>منابع و مدیریت مالی</a>
+  <div class="subnav"><a href="#">برآورد هزینه و بودجه</a><a href="#">منابع تأمین مالی</a><a href="#">تخصیص و کنترل هزینه‌ها</a><a href="#">تدارکات و پشتیبانی</a><a href="#">گزارش مالی و هزینه‌کرد</a></div>
+ </section>
+ <section class="nav-group">
+  <a class="nav-title" href="#"><span class="nav-icon">▥</span>پایش، ارزیابی و اثربخشی</a>
+  <div class="subnav"><a href="#">شاخص‌های عملکرد (KPI)</a><a href="#">شاخص‌های پیامد و اثر</a><a href="#">پایش پیشرفت و کیفیت اجرا</a><a href="#">ارزیابی رضایت جامعه محلی</a><a href="#">مدیریت ریسک و اقدامات اصلاحی</a><a href="#">درس‌آموخته‌ها و بهبود مستمر</a></div>
+ </section>
+ <section class="nav-group">
+  <a class="nav-title" href="#"><span class="nav-icon">▤</span>گزارش‌ها و مستندات</a>
+  <div class="subnav"><a href="#">گزارش‌های دوره‌ای</a><a href="#">صورت‌جلسات و مکاتبات</a><a href="#">تصاویر و مستندات اجرای پروژه</a><a href="#">قراردادها و پیوست‌ها</a><a href="#">منابع و مراجع مطالعاتی</a></div>
+ </section>
+ <section class="nav-group">
+  <a class="nav-title" href="#"><span class="nav-icon">◷</span>پایداری و چشم‌انداز</a>
+  <div class="subnav"><a href="#">برنامه تداوم و نگهداشت</a><a href="#">خروج و واگذاری مسئولانه</a><a href="#">هم‌راستایی با اهداف توسعه پایدار</a><a href="#">چشم‌انداز و نقشه راه آینده</a></div>
+ </section>
+
+ <div class="sidebar-foot">این فهرست، ساختار پیشنهادی سند پروژه مسئولیت‌های اجتماعی است. محتوای هر بخش پس از تکمیل مطالعات و مستندات قابل درج خواهد بود.</div>
+</aside>
+
+<main>
+ <div class="breadcrumb">خانه <span>‹</span> پروژه‌ها <span>‹</span> مسئولیت‌های اجتماعی</div>
+ <section class="hero">
+  <div class="hero-label">SOCIAL RESPONSIBILITY PROJECT DOCUMENT</div>
+  <h2>سند پروژه مسئولیت های اجتماعی</h2>
+  <p>چارچوب یکپارچه برنامه‌ریزی، نیازسنجی، اجرا، مشارکت ذی‌نفعان و ارزیابی اثربخشی اقدامات مسئولیت اجتماعی.</p>
+ </section>
+ <section class="content-card">
+  <div class="notice">
+   <div class="notice-icon">▤</div>
+   <h3>سند در دسترس نیست</h3>
+   <p>محتوای این سند در حال تدوین و تکمیل است. پس از آماده‌سازی و تأیید اطلاعات و مستندات پروژه، محتوای مربوطه در این بخش منتشر خواهد شد.</p>
+   <div class="notice-line"></div>
+  </div>
+ </section>
+ <div class="footer">سند پروژه مسئولیت های اجتماعی <span>•</span> نسخه نمایشی ساختار اطلاعات</div>
+</main>
+</div>
+</body>
+</html>
